@@ -1,0 +1,4 @@
+<h2>Races:</h2>
+{{#each model as |race|}}
+  <p>{{#link-to 'races.race' race}}{{race.name}}{{/link-to}}: {{race.description}}</p>
+{{/each}}

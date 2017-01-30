@@ -1,0 +1,11 @@
+<h2>Planet: {{model.name}}</h2>
+
+<h3>Description:</h3>
+<p>{{model.description}}</p>
+
+<h3>Race:</h3>
+<p>Name: {{#link-to 'races.race' model.race}}{{model.race.name}}{{/link-to}}</p>
+
+{{#each model.race.planets as |planet|}}
+  <p>{{planet.name}}</p>
+{{/each}}

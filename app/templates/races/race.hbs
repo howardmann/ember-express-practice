@@ -1,0 +1,19 @@
+<h2>Race: {{model.name}}</h2>
+
+<h3>Description:</h3>
+<p>{{model.description}}</p>
+
+<h3>Homeworld:</h3>
+{{#each model.planets as |planet|}}
+  <p>{{#link-to 'planets.planet' planet}}{{planet.name}}{{/link-to}}</p>
+  <p>{{planet.description}}</p>
+{{/each}}
+
+<h3>Heroes:</h3>
+{{#each model.heroes as |hero|}}
+  <p>{{hero.name}}</p>
+  <p>{{hero.description}}</p>
+  <hr>
+{{/each}}
+
+<p>{{#link-to 'races'}}All races{{/link-to}}</p>

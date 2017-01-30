@@ -1,0 +1,4 @@
+<h2>Planets:</h2>
+{{#each model as |planet|}}
+  <p>{{#link-to 'planets.planet' planet}}{{planet.name}}{{/link-to}}: {{planet.description}}</p>
+{{/each}}
